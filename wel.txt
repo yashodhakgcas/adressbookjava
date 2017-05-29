@@ -1,0 +1,4 @@
+workshop  : Handson Git
+venue : KGcas it lab
+date 29/5/17
+
