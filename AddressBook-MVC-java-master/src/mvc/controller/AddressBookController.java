@@ -60,7 +60,11 @@ public class AddressBookController {
                     openDelete();
                 else if(e.getSource()== view.getSearch())
                     openSearch();
+                else if(e.getSource()== view.getCount())
+                    openCount();
             }
+
+            
         };
         
         
@@ -68,6 +72,8 @@ public class AddressBookController {
         view.getDelete().addActionListener(actionListener);
         view.getEdit().addActionListener(actionListener);
         view.getSearch().addActionListener(actionListener);
+        view.getCount().addActionListener(actionListener);
+
       
     }
     
@@ -212,12 +218,19 @@ public class AddressBookController {
           daoimplement.removePerson(name);
           loadPersons();
         }
-        private void openSearch()
-        {
-            
-        }
     }
-    
+        private void openSearch() {
+            
+            String str;
+            str=JOptionPane.showInputDialog("Plz enter name");
+            daoimplement.searchPerson(nlp, str);
+        }
+        private void openCount() {
+           //     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+           
+            }
+
+      
     public void loadPersons()       
     {
         nlp = view.getNameListPanel();

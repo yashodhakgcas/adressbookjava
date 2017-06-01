@@ -34,6 +34,7 @@ public class AddressBookMainGUI {
     private JButton btn_edit;
     private JButton btn_delete;
     private JButton btn_search;
+    private JButton btn_count;
     private JPanel panel_btn;
     
     
@@ -79,7 +80,7 @@ public class AddressBookMainGUI {
         frame.getContentPane().add(detailsPanel,BorderLayout.CENTER);
         
         panel_btn= new JPanel();
-        panel_btn.setLayout(new GridLayout(1, 4));
+        panel_btn.setLayout(new GridLayout(1, 5));
         
         btn_add = new JButton("Add");
         panel_btn.add(btn_add);
@@ -92,6 +93,9 @@ public class AddressBookMainGUI {
         
         btn_search = new JButton("Search");
         panel_btn.add(btn_search);
+        
+        btn_count = new JButton("Count");
+        panel_btn.add(btn_count);
         
         frame.getContentPane().add(panel_btn,BorderLayout.SOUTH);
     }
@@ -136,6 +140,9 @@ public class AddressBookMainGUI {
     }
     public JButton getSearch(){
         return btn_search;
+    }
+    public JButton getCount(){
+        return btn_count;
     }
     public void setText(String text){
        // label.setText(text);
